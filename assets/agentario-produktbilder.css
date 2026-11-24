@@ -1,24 +1,20 @@
 .ap-visual {
   position: relative;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  background: #101010;
 }
-.ap-visual img {
+.ap-visual img,
+.ap-visual canvas {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-.ap-voice img, .ap-desktop img {
-  transform: scale(1.09);
-  transform-origin: 50% 56%;
-}
-.ap-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 66%, #101012 100%);
+  object-fit: contain;
   pointer-events: none;
 }
-.ap-workflows img { object-fit: contain; }
+.ap-visual canvas {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+.ap-visual.ap-rendered canvas { visibility: visible; }
+.ap-visual.ap-rendered img { visibility: hidden; }
