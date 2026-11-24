@@ -1,0 +1,54 @@
+/* The original four desks, in their shared room. Regular page scrolling. */
+.office-home .night{min-height:100vh;min-height:100svh;min-height:100dvh}
+.office-home .night h1{font-size:clamp(52px,7.3vw,112px);line-height:.98}
+.office-home .night-copy{padding-bottom:64px}
+.office-room{position:relative;isolation:isolate;background:#303238;color:#fff;scroll-margin-top:var(--global-header-height,73px)}
+.office-room .world-experience::before,.office-room .world-experience::after{content:'';position:absolute;z-index:1;left:0;right:0;pointer-events:none}
+.office-room .world-experience::before{top:0;height:clamp(100px,12vw,180px);background:linear-gradient(#0c0e11,rgba(12,14,17,0))}
+.office-room .world-experience::after{bottom:0;height:112px;background:linear-gradient(rgba(12,14,17,0),#0c0e11)}
+.office-room .world-experience{height:clamp(560px,48vw,720px);background:#303238;margin-inline:auto}
+.office-room .world-stage{position:absolute;inset:0;background:#303238}
+.office-room .world-stage canvas{width:100%;height:100%;position:absolute;inset:0;display:block}
+.office-copy{position:absolute;z-index:2;left:var(--hero-edge);top:50%;transform:translateY(-50%);width:26%;max-width:340px;pointer-events:none}
+.office-family{display:block;font:400 13px/1.4 var(--body);color:#c5c8ce;margin-bottom:18px}
+.office-copy h2{font:500 clamp(32px,3.4vw,52px)/1.08 var(--display);letter-spacing:-.045em;color:#fff;margin:0}
+.office-copy p{font:400 16px/1.6 var(--body);color:#d1d3d7;margin:20px 0;max-width:28ch}
+.office-link{pointer-events:auto;display:inline-flex;align-items:center;gap:20px;min-height:44px;border-bottom:1px solid #ffffff60;color:#fff;text-decoration:none;font-size:14px}
+.office-controls{display:none;position:absolute;z-index:3;left:var(--hero-edge);right:var(--hero-edge);bottom:30px;justify-content:center;gap:8px 30px;flex-wrap:wrap}
+.office-room:has([data-world-ready="true"]) .office-controls{display:flex}
+.office-controls button{padding:10px 0;min-height:44px;border:0;border-bottom:1px solid transparent;background:none;color:#c5c8ce;cursor:pointer;font:400 14px/1.4 var(--body)}
+.office-controls button:hover,.office-controls button[aria-pressed="true"]{color:#fff;border-bottom-color:#fff}
+.office-sequence{position:absolute;z-index:3;left:var(--hero-edge);right:var(--hero-edge);bottom:30px;display:flex;justify-content:space-between;pointer-events:none}
+.office-sequence button{pointer-events:auto;min-height:44px;padding:10px 0;border:0;background:none;color:#fff;font:400 14px/1.4 var(--body);cursor:pointer}
+.office-sequence button:disabled{opacity:.35;cursor:default}
+.office-credit{position:absolute;right:var(--hero-edge);bottom:98px;z-index:2;max-width:42ch;color:#b9bdc5;font:400 10px/1.5 var(--body)}
+.office-credit a{color:inherit}
+.office-room[data-gallery-view="overview"] .office-credit{display:none}
+.office-fallback{position:absolute;inset:0}
+.office-fallback img{position:absolute;right:0;top:0;width:70%;height:100%;object-fit:contain}
+.office-fallback-links{position:absolute;z-index:3;bottom:26px;left:var(--hero-edge);right:var(--hero-edge);display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:14px}
+.office-fallback-links a{display:flex;align-items:center;min-height:44px;text-decoration:none}
+.office-room:has([data-world-ready="true"]) .office-fallback-links{display:none}
+.office-room [hidden]{display:none!important}
+.office-room :focus-visible{outline:2px solid #fff;outline-offset:6px}
+.office-home .products{padding-top:72px}
+@media(max-width:760px){
+ .office-home .night-copy{padding-bottom:36px}
+ .office-home .night h1{font-size:clamp(44px,13vw,68px)}
+ .office-room .world-experience{height:660px}
+ .office-room .world-experience::before{height:180px}
+ .office-room .world-experience::after{height:140px}
+ .office-copy{top:28px;left:var(--gutter);right:var(--gutter);width:auto;max-width:none;transform:none}
+ .office-family{font-size:12px;margin-bottom:10px}
+ .office-copy h2{font-size:34px}
+ .office-copy p{font-size:14px;margin:12px 0 6px;max-width:36ch}
+ .office-link{font-size:13px}
+ .office-controls{bottom:60px;gap:0 22px}
+ .office-controls button{font-size:13px}
+ .office-sequence{bottom:10px}
+ .office-sequence button{font-size:13px}
+ .office-credit{left:var(--gutter);right:var(--gutter);bottom:114px;font-size:9px;max-width:none}
+ .office-fallback img{top:31%;width:100%;height:57%}
+ .office-home .products{padding-top:42px}
+}
+@media(prefers-reduced-motion:reduce){.office-home .night-film{animation:none}}
