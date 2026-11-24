@@ -15,80 +15,89 @@
 
 .home-references {
   background: linear-gradient(to bottom, #1b1b1d, #19191b 68%, var(--home-graphite));
-  padding-block: clamp(72px, 7vw, 116px) clamp(72px, 7.6vw, 124px);
+  padding-block: clamp(72px, 7vw, 116px) clamp(48px, 5vw, 80px);
 }
 .home-references > .cine-width { max-width: 1184px; }
 .home-quote {
   scroll-margin-top: calc(var(--global-header-height) + 32px);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(200px, 29%);
-  grid-template-areas: "quote portrait" "author portrait";
-  gap: 28px clamp(48px, 6.5vw, 112px);
-  margin: 0;
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
 }
 .home-quote blockquote {
-  grid-area: quote;
-  align-self: end;
   margin: 0;
   font: 400 clamp(31px, 2.8vw, 45px)/1.23 'Newsreader', Georgia, serif;
   letter-spacing: -.016em;
 }
-.home-quote blockquote p { font: inherit; color: inherit; margin: 0; text-wrap: pretty; }
+.home-quote blockquote p { font: inherit; color: inherit; margin: 0; text-wrap: balance; }
 .home-quote blockquote p::before { content: open-quote; }
 .home-quote blockquote p::after { content: close-quote; }
+.home-quote figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px 0 0;
+  text-align: start;
+}
 .home-quote-portrait {
-  grid-area: portrait;
-  align-self: center;
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 5 / 4;
+  flex: none;
+  width: 56px;
+  height: 56px;
   object-fit: cover;
   object-position: 43% 40%;
-  border-radius: 3px;
+  border-radius: 50%;
 }
-.home-quote figcaption { grid-area: author; align-self: start; display: grid; justify-items: start; gap: 4px; margin: 0; }
+.home-quote figcaption > div { display: grid; justify-items: start; gap: 2px; }
 .home-quote figcaption a { color: inherit; font: 600 18px/1.4 var(--cine-sans); text-decoration: none; }
 .home-quote figcaption a:hover { text-decoration: underline; text-underline-offset: .22em; }
 .home-quote figcaption a [aria-hidden] { font-size: .75em; color: var(--home-silver); }
-.home-quote figcaption > span { color: var(--home-silver); font: 400 15px/1.45 var(--body); }
+.home-quote figcaption div > span { color: var(--home-silver); font: 400 15px/1.45 var(--body); }
 
 .home-trust {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  align-items: center;
-  gap: clamp(38px, 6vw, 96px);
-  margin-block-start: clamp(62px, 6.3vw, 104px);
-  border-block-start: 1px solid #424245;
-  padding-block-start: clamp(42px, 4.2vw, 70px);
+  max-width: 62rem;
+  margin: clamp(54px, 5.6vw, 88px) auto 0;
 }
 .home-trust h3 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin: 0;
-  max-width: 19ch;
-  color: var(--home-chalk);
-  font: 500 clamp(23px, 1.9vw, 30px)/1.27 var(--cine-sans);
-  letter-spacing: -.025em;
-  text-wrap: balance;
+  color: #aaa9ad;
+  font: 400 .75rem/1.45 var(--body);
+  text-align: center;
+}
+.home-trust h3::before,
+.home-trust h3::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #363638;
 }
 .home-trust ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px clamp(16px, 2.2vw, 38px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(32px, 3.3vw, 48px);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #525254 transparent;
+  margin: 16px 0 0;
+  padding: 4px 0;
 }
-.home-trust li { min-width: 0; min-height: 62px; display: grid; place-items: center; }
+.home-trust li { flex: none; display: grid; place-items: center; height: 44px; }
 .home-trust img {
   display: block;
   width: auto;
   height: auto;
-  max-width: min(100%, 154px);
-  max-height: 55px;
-  filter: brightness(0) invert(1);
+  max-width: 128px;
+  max-height: 36px;
+  filter: brightness(0) invert(82%);
 }
-.home-trust .trust-gdg { width: 100%; max-width: 240px; }
-.home-trust .trust-iotec { width: 99px; }
+.home-trust .trust-gdg { width: clamp(164px, 16vw, 190px); max-width: none; }
+.home-trust .trust-iotec { width: 76px; }
 
 .home-traffic {
   position: relative;
@@ -143,10 +152,6 @@
 }
 .home-traffic-credit a { color: inherit; text-underline-offset: .16em; white-space: nowrap; }
 
-@media (max-width: 900px) {
-  .home-trust { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .home-trust h3 { max-width: 30ch; }
-}
 @media (max-width: 760px) {
   .home-traffic { min-height: 0; }
   .home-traffic-layout { grid-row: 1; padding-block: 42px 12px; }
@@ -158,22 +163,12 @@
   .home-traffic-credit { grid-row: 2; grid-column: 1; align-self: end; padding-block: 14px; }
 }
 @media (max-width: 700px) {
-  .home-references { padding-block: 64px 68px; }
-  .home-quote {
-    grid-template-columns: 64px minmax(0, 1fr);
-    grid-template-areas: "quote quote" "portrait author";
-    gap: 24px 16px;
-  }
+  .home-references { padding-block: 64px 48px; }
+  .home-quote { text-align: start; }
   .home-quote blockquote { max-width: 34ch; font-size: clamp(27px, 5.4vw, 35px); line-height: 1.27; }
-  .home-quote-portrait { aspect-ratio: 1; border-radius: 50%; }
-  .home-quote figcaption { align-self: center; gap: 2px; }
+  .home-quote blockquote p { text-wrap: pretty; }
+  .home-quote-portrait { width: 44px; height: 44px; }
+  .home-quote figcaption { justify-content: flex-start; gap: 12px; margin-top: 22px; }
   .home-quote figcaption a { font-size: 16px; }
-  .home-quote figcaption > span { font-size: 14px; }
-}
-@media (max-width: 560px) {
-  .home-trust h3 { max-width: 23ch; }
-  .home-trust ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  .home-trust li { min-height: 51px; }
-  .home-trust img { max-width: min(100%, 124px); max-height: 47px; }
-  .home-trust .trust-iotec { width: 77px; }
+  .home-quote figcaption div > span { font-size: 14px; }
 }
