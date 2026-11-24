@@ -1,10 +1,8 @@
 .ap-overview {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  border-radius: 14px;
-  background: #303033;
+  gap: clamp(26px, 3vw, 52px);
+  padding-block: clamp(22px, 2.8vw, 48px) clamp(64px, 6.2vw, 104px);
 }
 .ap-product {
   display: grid;
@@ -12,31 +10,32 @@
   align-content: start;
   min-width: 0;
   color: #f8f8f8;
-  background: #101012;
-  padding: 0 0 clamp(15px, 2vw, 28px);
 }
-.ap-product > :is(h3, p, .ap-example) { margin-inline: clamp(18px, 2vw, 32px); }
+.ap-product .ap-visual { margin-bottom: clamp(18px, 1.8vw, 28px); }
 .ap-product h3 {
-  margin-block: 0 9px;
+  margin: 0 0 14px;
   font: 560 clamp(23px, 2.05vw, 33px)/1.14 var(--cine-sans);
   letter-spacing: -.036em;
 }
 .ap-product h3 a { display: inline-flex; align-items: baseline; gap: .4em; color: inherit; text-decoration: none; }
 .ap-product h3 [aria-hidden] { color: #c0c0c4; font-size: .61em; }
-.ap-product p { margin-block: 0; max-width: 35ch; color: #c0c0c4; font-size: clamp(16px, 1.05vw, 18px); line-height: 1.52; }
+.ap-product p { margin: 0; max-width: 35ch; color: #c0c0c4; font-size: clamp(16px, 1.05vw, 18px); line-height: 1.58; }
 .ap-example {
-  display: inline-flex;
-  align-items: center;
+  display: block;
+  align-content: center;
   justify-self: start;
-  gap: .55em;
   min-height: 44px;
-  margin-top: 7px;
+  max-width: 100%;
+  margin-top: 18px;
+  padding-block: 8px;
   color: inherit;
   font-weight: 550;
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
+.ap-example span:first-child { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .24em; }
+.ap-example [aria-hidden]::before { content: "\00a0"; }
 .ap-product h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em; }
-.ap-example:hover { text-decoration-thickness: 2px; }
+.ap-example:hover span:first-child { text-decoration-thickness: 2px; }
 .ap-overview a:focus-visible, .ap-dialog :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .ap-dialog {
   position: fixed;
@@ -74,18 +73,23 @@
 .ap-dialog .ac-demo { margin: 0; border: 0; border-radius: 0; }
 .ap-dialog section.product-experience[data-product-experience] { margin: 0; border: 0; border-radius: 0; }
 body:has(.ap-dialog[open]) { overflow: hidden; }
-@media (max-width: 720px) {
-  .ap-overview { grid-template-columns: 1fr; }
+@media (min-width: 621px) and (max-width: 900px) {
+  .ap-overview { grid-template-columns: minmax(0, 1fr); gap: 42px; }
   .ap-product {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto auto auto;
-    gap: 0 16px;
-    padding-bottom: 16px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    grid-template-rows: 1fr auto auto 1fr;
+    column-gap: clamp(24px, 4.5vw, 42px);
   }
-  .ap-product .ap-visual { grid-column: 1; grid-row: 1; margin-bottom: 0; }
-  .ap-product h3, .ap-product p, .ap-product .ap-example { grid-column: 1; }
-  .ap-product h3 { margin-block: 0 5px; font-size: 24px; }
-  .ap-product p { font-size: 15px; }
-  .ap-example { margin-top: 2px; font-size: 15px; }
+  .ap-product .ap-visual { grid-row: 1 / -1; grid-column: 1; align-self: center; margin: 0; }
+  .ap-product h3 { grid-row: 2; grid-column: 2; }
+  .ap-product p { grid-row: 3; grid-column: 2; }
+  .ap-product .ap-example { grid-row: 4; grid-column: 2; align-self: start; margin-top: 12px; }
+}
+@media (max-width: 620px) {
+  .ap-overview { grid-template-columns: minmax(0, 1fr); gap: 46px; }
+  .ap-product h3 { margin-bottom: 10px; font-size: 26px; }
+  .ap-example { margin-top: 12px; }
+}
+@media (max-width: 720px) {
   .ap-dialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); }
 }
