@@ -33,7 +33,7 @@
   margin: 16px 0 0;
 }
 .team-section .team-intro p { max-width: 49ch; margin-top: 0; }
-.team-section .team-action, .team-profile-link, .contact-person-link {
+.team-section .team-action, .contact-person-link {
   display: inline-flex;
   align-items: baseline;
   gap: 7px;
@@ -61,19 +61,19 @@
   letter-spacing: -.045em; overflow-wrap: anywhere;
 }
 .team-section .team-role { margin: 6px 0 0; font: 500 14px/1.4 var(--body, sans-serif); color: #444; }
-.team-profile-link { margin-top: 9px; }
-.team-name-row { display: flex; align-items: center; }
 .team-linkedin {
-  display: inline-flex;
-  flex: none;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin-block: -12px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  margin-block: -4px;
+  color: inherit;
+  text-decoration: none;
 }
-.team-linkedin img { display: block; height: auto; }
-.team-linkedin:hover img { opacity: .8; }
+.team-name-end { white-space: nowrap; }
+.team-linkedin img { display: inline-block; height: auto; margin-inline-start: 5px; vertical-align: -.06em; }
+.team-linkedin:hover { text-decoration: underline; text-underline-offset: .12em; }
 .team-reference { margin: 18px 0 0; }
 .team-reference a { color: #444; font-size: 15px; line-height: 1.5; text-underline-offset: .2em; }
 .team-extra { font-weight: 500; color: inherit; text-underline-offset: .2em; }
@@ -138,9 +138,8 @@
 .team-compact .team-photo { border-radius: 50%; }
 .team-compact .team-person-copy { padding: 0; }
 .team-compact .team-person h3 { font-size: 17px; letter-spacing: -.02em; }
-.team-compact .team-linkedin img { width: 19px; }
+.team-compact .team-linkedin img { width: 21px; }
 .team-compact .team-role { margin-top: 3px; font-size: 13px; }
-.team-compact .team-profile-link { margin: 0; font-size: 12px; }
 
 @media (min-width: 540px) and (max-width: 940px) {
   .team-compact .team-roster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -150,12 +149,11 @@
   .team-compact .team-person { grid-template-columns: 36px minmax(0, 1fr); }
 }
 @media (max-width: 650px) {
-  .team-section .team-action, .team-profile-link, .contact-person-link {
+  .team-section .team-action, .contact-person-link {
     min-height: 44px;
     align-items: center;
   }
-  .team-compact .team-profile-link { font-size: 14px; }
-  :is(.team-action, .team-profile-link, .contact-person-link):active {
+  :is(.team-action, .contact-person-link):active {
     text-decoration-thickness: 2px;
   }
 }
