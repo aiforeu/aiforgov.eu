@@ -11,31 +11,28 @@
     const pets = [...stage.querySelectorAll('.ive-net-pet')];
     const paths = [...stage.querySelectorAll('.ive-net-wires path')];
     const replay = figure.querySelector('.ive-net-replay');
-    const picker = figure.querySelector('#ive-models-agent');
+    const models = figure.querySelector('.ive-models');
 
-    if (picker) {
+    if (models) {
+      function select(agent) {
+        models.dataset.agent = agent;
+        pets.forEach((pet, index) => {
+          const selected = pet.dataset.agent === agent;
+          pet.querySelector('button').setAttribute('aria-pressed', String(selected));
+          pet.classList.toggle('is-selected', selected);
+          paths[index].classList.toggle('is-selected', selected);
+        });
+      }
       pets.forEach(pet => {
         const choose = document.createElement('button');
         choose.type = 'button';
         choose.className = 'ive-net-choose';
         choose.setAttribute('aria-label', pet.querySelector('.ive-net-name').textContent.trim());
         choose.setAttribute('aria-controls', 'ive-models-result');
-        choose.addEventListener('click', () => {
-          picker.value = pet.dataset.agent;
-          picker.dispatchEvent(new Event('change', {bubbles: true}));
-        });
+        choose.addEventListener('click', () => select(pet.dataset.agent));
         pet.append(choose);
       });
-      function syncSelection() {
-        pets.forEach((pet, index) => {
-          const selected = pet.dataset.agent === picker.value;
-          pet.querySelector('button').setAttribute('aria-pressed', String(selected));
-          pet.classList.toggle('is-selected', selected);
-          paths[index].classList.toggle('is-selected', selected);
-        });
-      }
-      picker.addEventListener('change', syncSelection);
-      syncSelection();
+      select(pets[0].dataset.agent);
     }
     if (!stage.animate || !window.IntersectionObserver) continue;
 

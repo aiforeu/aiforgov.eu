@@ -12,7 +12,7 @@ const content={
   voice:{title:'Voice',copy:'AIFOREU Workforce nimmt Anrufe an und führt die nächsten Schritte aus.',href:'workforce/voice/',action:'Voice entdecken'},
   desktop:{title:'Desktop',copy:'AIFOREU Workforce arbeitet direkt in Ihrer Software.',href:'workforce/desktop/',action:'Desktop entdecken'},
   workflows:{title:'Workflows',copy:'AIFOREU Workforce verbindet Ihre Programme zu einem gemeinsamen Ablauf.',href:'workforce/workflows/',action:'Workflows entdecken'},
-  traffic:{title:'VerkehrsAI',copy:'Lage- und Signalpläne digital erschließen. Mit VerkehrsOS als EU-gefördertem Forschungsprojekt.',href:'verkehrsai.html',action:'VerkehrsAI entdecken'},
+  traffic:{title:'VerkehrsAI',copy:'Lage- und Signalpläne digital erschließen. Mit AI4EU-Traffic als EU-gefördertem Forschungsprojekt.',href:'verkehrsai.html',action:'VerkehrsAI entdecken'},
 };
 
 function environment(renderer){
