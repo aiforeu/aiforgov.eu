@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://aiforgov.eu/blog-adaptive-ampelsteuerung-wirkung-messen.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-ampeldaten-spat-map.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-ampelsteuerung-simulation-sumo.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-busbevorrechtigung-ampel.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-fussverkehr-ampel-wartezeit.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-gruene-welle-fahrrad.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-ki-ampel-lemgo.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-ki-ampel-pilot-ausschreibung.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-ki-gestuetzte-verkehrssteuerung.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-verkehrssensoren-kreuzung.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-verkehrszaehlung-kamera-datenschutz.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-verkehrszaehlung-knotenstrom.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://aiforgov.eu/anyuse.html</loc></url>
   <url><loc>https://aiforgov.eu/automatisierungen.html</loc></url>
   <url><loc>https://aiforgov.eu/blog-workforce-plattform.html</loc><lastmod>2026-11-12</lastmod></url>
@@ -11,13 +23,13 @@
   <url><loc>https://aiforgov.eu/blog-ki-telefonassistent-kosten-nutzen.html</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://aiforgov.eu/blog-ki-telefonassistent.html</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://aiforgov.eu/blog-ki-verordnung-unternehmen.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aiforgov.eu/blog-kreuzungsplaene-digitalisieren.html</loc><lastmod>2026-11-24</lastmod></url>
-  <url><loc>https://aiforgov.eu/blog-kreuzungsvarianten-vergleichen.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-kreuzungsplaene-digitalisieren.html</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog-kreuzungsvarianten-vergleichen.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://aiforgov.eu/blog-portal-ohne-api-automatisieren.html</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://aiforgov.eu/blog-prozessautomatisierung-pilotprojekt.html</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://aiforgov.eu/blog-repetitive-arbeit-automatisieren.html</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://aiforgov.eu/blog-terminbuchung-am-telefon.html</loc><lastmod>2026-11-24</lastmod></url>
-  <url><loc>https://aiforgov.eu/blog.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://aiforgov.eu/blog.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://aiforgov.eu/datenschutz.html</loc></url>
   <url><loc>https://aiforgov.eu/impressum.html</loc></url>
   <url><loc>https://aiforgov.eu/</loc><lastmod>2026-11-25</lastmod></url>
@@ -26,7 +38,7 @@
   <url><loc>https://aiforgov.eu/projekte.html</loc></url>
   <url><loc>https://aiforgov.eu/terminbeispiel.html</loc></url>
   <url><loc>https://aiforgov.eu/unternehmen.html</loc></url>
-  <url><loc>https://aiforgov.eu/verkehrsai.html</loc></url>
+  <url><loc>https://aiforgov.eu/verkehrsai.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://aiforgov.eu/workflow-beispiele.html</loc></url>
   <url><loc>https://aiforgov.eu/workforce/about/</loc></url>
   <url><loc>https://aiforgov.eu/workforce/compare/</loc></url>
