@@ -30,14 +30,13 @@
 .page-traffic .traffic-intro-copy .bp-link:hover { color: var(--traffic-action-hover); }
 
 .page-traffic .site-footer[data-company-footer] {
-  --accent: var(--traffic-action-hover);
-  background: var(--traffic-surface);
-  color: var(--traffic-ink);
+  --accent: var(--traffic-surface);
+  background: #263640;
+  color: var(--traffic-wash);
 }
-.page-traffic .site-footer :is(.brand, .footer-top h2) { color: var(--traffic-ink); }
-.page-traffic .site-footer .brand img { filter: none; }
-.page-traffic .site-footer :is(.footer-brand p, .footer-bottom) { color: var(--traffic-muted); }
-.page-traffic .site-footer :is(.footer-links, .footer-bottom) a { color: var(--traffic-action); }
-.page-traffic .site-footer :is(.footer-partner, .footer-bottom) { border-color: var(--traffic-line); }
-.page-traffic .site-footer .footer-wordmark { color: #a4b7c4; }
-.page-traffic .site-footer a:is(:hover, :focus-visible) { color: var(--traffic-action-hover); }
+.page-traffic .site-footer :is(.brand, .footer-top h2) { color: var(--traffic-wash); }
+.page-traffic .site-footer :is(.footer-brand p, .footer-bottom) { color: #c0ccd4; }
+.page-traffic .site-footer :is(.footer-links, .footer-bottom) a { color: #c4dcce; }
+.page-traffic .site-footer :is(.footer-partner, .footer-bottom) { border-color: #50616d; }
+.page-traffic .site-footer .footer-wordmark { color: #485d6a; }
+.page-traffic .site-footer a:is(:hover, :focus-visible) { color: #fff; }
