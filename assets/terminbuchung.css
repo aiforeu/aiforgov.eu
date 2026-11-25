@@ -36,6 +36,20 @@
   text-underline-offset: .2em;
   text-decoration: underline;
 }
+.contact-booking-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+button.contact-booking-alternate {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
 @media (max-width: 600px) {
   .contact-booking iframe { height: 800px; margin-top: 16px; }
 }

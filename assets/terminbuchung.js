@@ -4,6 +4,8 @@
   if (!section) return;
   const open = section.querySelector('[data-terminwahl]');
   const alternate = section.querySelector('[data-buchungslink]');
+  const actions = section.querySelector('[data-buchungsaktionen]') || alternate;
+  const retry = section.querySelector('[data-buchung-neuladen]');
   const frame = section.querySelector('iframe');
 
   function setLanguage() {
@@ -22,8 +24,12 @@
     const url = setLanguage();
     frame.src = url.href;
     frame.hidden = false;
-    alternate.hidden = false;
+    actions.hidden = false;
     open.hidden = true;
+    frame.focus();
+  });
+  retry?.addEventListener('click', () => {
+    frame.src = setLanguage().href;
     frame.focus();
   });
   window.addEventListener('aiforeu:language-ready', () => {
