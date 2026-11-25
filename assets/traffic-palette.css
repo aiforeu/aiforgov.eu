@@ -17,3 +17,18 @@
 .page-traffic :is(.tm-inventory>div,.tm-streets li){border-color:#eaeaea}
 .page-traffic .tm-motion-control{color:#424242;border-color:#acacac77}
 .page-traffic .tm-motion-control:focus-visible{outline-color:#5e5e5e}
+
+.page-traffic .traffic-contact-section { background-color: #f5f8f3; }
+
+.page-traffic .site-footer[data-company-footer] {
+  --accent: #d5f0c1;
+  background-color: #1e432f;
+}
+.page-traffic .site-footer :is(.footer-brand p, .footer-links a, .footer-bottom, .footer-bottom a) {
+  color: #d8e6d9;
+}
+.page-traffic .site-footer :is(.footer-partner, .footer-bottom) {
+  border-color: #55765e;
+}
+.page-traffic .site-footer .footer-wordmark { color: #567f62; }
+.page-traffic .site-footer a:is(:hover, :focus-visible) { color: #fff; }
