@@ -78,11 +78,6 @@
   height: auto;
   margin-inline-start: 5px;
   vertical-align: .07em;
-  filter: grayscale(1) opacity(.8);
-}
-.team-linkedin:focus-visible img { filter: none; }
-@media (hover: hover) {
-  .team-linkedin:hover img { filter: none; }
 }
 .team-reference { margin: 18px 0 0; }
 .team-reference a { color: #444; font-size: 15px; line-height: 1.5; text-underline-offset: .2em; }
