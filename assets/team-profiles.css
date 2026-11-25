@@ -78,6 +78,9 @@
 .contact-people .team-faces img { width: 44px; height: 44px; }
 .contact-people .team-faces img + img { margin-left: -9px; }
 .contact-people .contact-person-link { margin: 0; }
+@media (min-width: 651px) {
+  .company-page .team-photo { width: min(78%, 192px); }
+}
 @media (min-width: 651px) and (max-width: 940px) {
   .team-roster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -88,7 +91,7 @@
 }
 @media (max-width: 650px) {
   .team-roster { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  .team-person { display: grid; grid-template-columns: minmax(87px, 32%) minmax(0, 1fr); gap: 16px; align-items: start; padding-top: 19px; border-top: 1px solid #d5d5d5; }
+  .team-person { display: grid; grid-template-columns: clamp(72px, 24%, 96px) minmax(0, 1fr); gap: 16px; align-items: start; padding-top: 19px; border-top: 1px solid #d5d5d5; }
   .team-person-copy { padding-top: 0; }
   .team-section .team-intro h2 { max-width: 16ch; }
   .opening-actions .team-cta { padding-inline: 11px; }
