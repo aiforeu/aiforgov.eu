@@ -72,8 +72,8 @@
 }
 
 .traffic-followup {
-  background: #eff5ef;
-  color: #183724;
+  background: var(--traffic-sand);
+  color: var(--traffic-ink);
 }
 .traffic-followup h2 {
   font: 500 clamp(32px, 3.2vw, 46px)/1.1 "Schibsted Grotesk", var(--display);
@@ -82,7 +82,7 @@
 .page-traffic .traffic-followup-copy p {
   max-width: 56ch;
   margin-top: 18px;
-  color: #394b40;
+  color: var(--traffic-copy);
   font: 400 clamp(16px, 1.2vw, 18px)/1.6 var(--body);
 }
 .traffic-followup blockquote {
@@ -109,7 +109,7 @@
   font: 600 16px/1.4 var(--body);
 }
 .traffic-quote-source {
-  color: #405548;
+  color: var(--traffic-deep);
   font: 500 14px/1.5 var(--body);
   text-decoration: underline;
   text-underline-offset: .22em;

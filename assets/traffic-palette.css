@@ -1,34 +1,59 @@
-/* Daylight extends from the junction into the research and planning sections. */
-.page-traffic{--traffic-deep:#234b35;--traffic-light-text:#fff}
-.page-traffic .traffic-research-section{background:#fff;color:#142c20}
-.page-traffic .traffic-research-copy p,.page-traffic .traffic-research-partners p{color:#394b40}
-.page-traffic .traffic-research-partners p{border-color:#c9d5cc}
-.page-traffic .traffic-research-aiforeu img{filter:none}
-.page-traffic .traffic-plan-section{background:var(--paper)}
-.page-traffic .traffic-contact-panel>div:first-child>p:not(.eyebrow),.page-traffic .traffic-pilot-notes>p{color:#e4eee3}
-.page-traffic .traffic-pilot-notes,.page-traffic .traffic-pilot-notes>div{border-color:#63826d}
-.page-traffic .traffic-pilot-notes>div>span,.page-traffic .traffic-pilot-notes .traffic-small-label{color:#d0e0d1}
-.page-traffic .traffic-contact-panel .button:hover{background:#e8f1df;border-color:#e8f1df}
-.page-traffic .traffic-mockup{color:#303030}
-.page-traffic .tm-window{border-color:#dbdbdb;box-shadow:0 28px 60px -45px #17171733}
-.page-traffic .tm-appbar{background:#eff5ec;border-color:#d6e1d4}
-.page-traffic :is(.tm-example,.tm-heading>span,.tm-inventory dt,.tm-detail>p),.page-traffic .traffic-mockup figcaption{color:#696969}
-.page-traffic :is(.tm-result,.tm-detail){border-color:#e0e0e0}
-.page-traffic :is(.tm-inventory>div,.tm-streets li){border-color:#eaeaea}
-.page-traffic .tm-motion-control{color:#424242;border-color:#acacac77}
-.page-traffic .tm-motion-control:focus-visible{outline-color:#5e5e5e}
+/* The clay accent echoes the route highlight in the traffic plan. */
+.page-traffic {
+  --traffic-ink: #292929;
+  --traffic-copy: #4d4946;
+  --traffic-muted: #665e58;
+  --traffic-deep: #884c37;
+  --traffic-deep-hover: #6c392a;
+  --traffic-sand: #f3ede5;
+  --traffic-line: #dbcec2;
+  --traffic-light-text: #fffaf5;
+  --traffic-on-clay: #f5e8dd;
+  --traffic-focus-light: #ffd5b8;
+}
+.page-traffic main {
+  --accent: var(--traffic-deep-hover);
+  color: var(--traffic-ink);
+}
+.page-traffic .traffic-research-section {
+  background: var(--paper);
+  color: var(--traffic-ink);
+}
+.page-traffic .traffic-research-copy p,
+.page-traffic .traffic-research-partners p { color: var(--traffic-copy); }
+.page-traffic .traffic-research-partners p { border-color: var(--traffic-line); }
+.page-traffic .traffic-research-aiforeu img { filter: none; }
+.page-traffic .traffic-plan-section { background: var(--paper); }
 
-.page-traffic .traffic-contact-section { background-color: #f5f8f3; }
+.page-traffic .traffic-mockup { color: var(--traffic-ink); }
+.page-traffic .tm-window { border-color: #dbdbdb; box-shadow: 0 28px 60px -45px #17171733; }
+.page-traffic .tm-appbar { background: var(--traffic-sand); border-color: var(--traffic-line); }
+.page-traffic :is(.tm-example, .tm-heading > span, .tm-inventory dt, .tm-detail > p),
+.page-traffic .traffic-mockup figcaption { color: var(--traffic-muted); }
+.page-traffic :is(.tm-result, .tm-detail) { border-color: #e0e0e0; }
+.page-traffic :is(.tm-inventory > div, .tm-streets li) { border-color: #eaeaea; }
+.page-traffic .tm-motion-control { color: #424242; border-color: #acacac77; }
+.page-traffic .tm-motion-control:focus-visible { outline-color: var(--traffic-deep-hover); }
+
+.page-traffic .traffic-contact-section { background: #fbf8f4; }
+.page-traffic .traffic-contact-panel > div:first-child > p:not(.eyebrow),
+.page-traffic .traffic-pilot-notes > p,
+.page-traffic .traffic-pilot-notes > div > span,
+.page-traffic .traffic-pilot-notes .traffic-small-label { color: var(--traffic-on-clay); }
+.page-traffic .traffic-pilot-notes,
+.page-traffic .traffic-pilot-notes > div { border-color: #b9856c; }
+.page-traffic .traffic-contact-panel .button:hover { background: #f2d9c6; border-color: #f2d9c6; }
+.page-traffic .traffic-contact-panel :focus-visible { outline-color: var(--traffic-focus-light); }
 
 .page-traffic .site-footer[data-company-footer] {
-  --accent: #d5f0c1;
-  background-color: #1e432f;
+  --accent: var(--traffic-focus-light);
+  background: #593f34;
+  color: var(--traffic-light-text);
 }
+.page-traffic .site-footer :is(.brand, .footer-top h2) { color: var(--traffic-light-text); }
 .page-traffic .site-footer :is(.footer-brand p, .footer-links a, .footer-bottom, .footer-bottom a) {
-  color: #d8e6d9;
+  color: #f0dfd1;
 }
-.page-traffic .site-footer :is(.footer-partner, .footer-bottom) {
-  border-color: #55765e;
-}
-.page-traffic .site-footer .footer-wordmark { color: #567f62; }
+.page-traffic .site-footer :is(.footer-partner, .footer-bottom) { border-color: #8e6d5d; }
+.page-traffic .site-footer .footer-wordmark { color: #ab8370; }
 .page-traffic .site-footer a:is(:hover, :focus-visible) { color: #fff; }
