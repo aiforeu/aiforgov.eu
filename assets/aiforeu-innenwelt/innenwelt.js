@@ -9,7 +9,7 @@ import { CARRIER_SCROLL, sampleScrollJourney, scrollProgress } from './scroll-jo
 const mounted = new WeakMap();
 const content = {
   traffic: {title:'VerkehrsAI', copy:'KI für Lage- und Signalpläne. VerkehrsOS entsteht als EU-gefördertes Forschungsprojekt.', href:'verkehrsai.html', action:'VerkehrsAI öffnen', secondaryHref:'verkehrsos.html', secondaryAction:'VerkehrsOS'},
-  workforce: {title:'Autonomous Workforce', copy:'Agentario verbindet KI-Agenten, Ihre Software und wiederkehrende Abläufe.', href:'agentario/', action:'Agentario öffnen', secondaryHref:'autonomous-workforce.html', secondaryAction:'Bereich ansehen'},
+  workforce: {title:'Autonomous Workforce', copy:'AIFOREU Workforce verbindet KI-Agenten, Ihre Software und wiederkehrende Abläufe.', href:'workforce/', action:'AIFOREU Workforce öffnen', secondaryHref:'autonomous-workforce.html', secondaryAction:'Bereich ansehen'},
 };
 // A neutral studio sky lights the real surfaces; the rooms have their own fixtures.
 function environment(renderer) {

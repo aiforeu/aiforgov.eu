@@ -1,4 +1,4 @@
-/* AIFOREU · Flug · Modell „workforce“ – Agentario: Autonomous Workforce.
+/* AIFOREU · Flug · Modell „workforce“ – AIFOREU Workforce: Autonomous Workforce.
    Modulare Raumstation: Nabe mit Andockringen, vier Arme mit Modulen, zwei Solarflügelpaare.
    Auf einem Schienennetz (Ring um die Nabe, Doppelspur je Arm) pendeln Agenten-Kapseln mit oranger Fracht. */
 import { RoundedBoxGeometry } from '../agentario-scene/vendor/RoundedBoxGeometry.js';

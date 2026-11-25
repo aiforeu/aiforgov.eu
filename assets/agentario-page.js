@@ -1,4 +1,4 @@
-/* Local illustration of Agentario's intended workflow. No network or persistence. */
+/* Local illustration of AIFOREU Workforce's intended workflow. No network or persistence. */
 (() => {
  'use strict';
  const demo = document.querySelector('[data-ag-demo]');

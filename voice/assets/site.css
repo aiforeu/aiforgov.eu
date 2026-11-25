@@ -449,3 +449,10 @@ a{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
 @keyframes call-confirm{from{opacity:0;transform:translateY(6px) scale(.6)}to{opacity:1;transform:none}}
 @media(max-width:600px){.call-cast{grid-template-columns:minmax(0,1fr) 72px minmax(0,1fr);gap:10px;padding:32px 16px 16px}.call-avatar{width:54px;height:54px;border-radius:18px}.call-person{gap:12px}.call-keys{gap:5px}.call-keys i{width:16px;height:20px}.call-phase-label{font-size:.625rem}.call-connection{height:54px}.call-person small{min-width:0}}
 @media(prefers-reduced-motion:reduce){[data-call-phase="ringing"] [data-call-speaker="AIFOREU Voice"] .call-avatar::before{opacity:.7;transform:none}.demo-result.is-confirmed .demo-result-title::before{animation:none}}
+/* E-mail draft of the pilot form. */
+.cf-draft{margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.cf-draft h3{font-size:1.05rem;line-height:1.4;letter-spacing:0;margin:0;padding:0}
+.cf-draft .cf-hint{margin-top:6px}
+.cf-draft .button{margin-top:14px}
+.cf-draft .cf-row{margin:20px 0 0}
+.cf-draft textarea{min-height:170px}

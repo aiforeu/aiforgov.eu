@@ -5,7 +5,7 @@ import { mountExplorerControls } from './explorer-controls.js';
 
 const content = {
   traffic: { title: 'VerkehrsAI', copy: 'Intelligente Werkzeuge für die Verkehrsplanung. Von der Kreuzung bis zum nächsten Planungsschritt.', href: 'verkehrsai.html' },
-  workforce: { title: 'Autonomous Workforce', copy: 'Agentario verbindet Gespräche, Software und Workflows. Ihr Team gibt die Richtung vor. Agenten übernehmen die Routine.', href: 'autonomous-workforce.html' }
+  workforce: { title: 'Autonomous Workforce', copy: 'AIFOREU Workforce verbindet Gespräche, Software und Workflows. Ihr Team gibt die Richtung vor. Agenten übernehmen die Routine.', href: 'autonomous-workforce.html' }
 };
 const instances = new WeakMap();
 const precisionStyles = new URL('./world-controls.css', import.meta.url).href;

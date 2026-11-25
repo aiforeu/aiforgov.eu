@@ -8,10 +8,10 @@ import { createRearHangar } from './rear-hangar.js?v=gray-room-1';
 
 const mounted=new WeakMap();
 const content={
-  overview:{title:'Unsere Arbeitsbereiche.',copy:'Wählen Sie einen Tisch.',href:'agentario/',action:'Agentario entdecken'},
-  voice:{title:'Voice',copy:'Agentario nimmt Anrufe an und führt die nächsten Schritte aus.',href:'agentario/voice/',action:'Voice entdecken'},
-  desktop:{title:'Desktop',copy:'Agentario arbeitet direkt in Ihrer Software.',href:'agentario/desktop/',action:'Desktop entdecken'},
-  workflows:{title:'Workflows',copy:'Agentario verbindet Ihre Programme zu einem gemeinsamen Ablauf.',href:'agentario/workflows/',action:'Workflows entdecken'},
+  overview:{title:'Unsere Arbeitsbereiche.',copy:'Wählen Sie einen Tisch.',href:'workforce/',action:'AIFOREU Workforce entdecken'},
+  voice:{title:'Voice',copy:'AIFOREU Workforce nimmt Anrufe an und führt die nächsten Schritte aus.',href:'workforce/voice/',action:'Voice entdecken'},
+  desktop:{title:'Desktop',copy:'AIFOREU Workforce arbeitet direkt in Ihrer Software.',href:'workforce/desktop/',action:'Desktop entdecken'},
+  workflows:{title:'Workflows',copy:'AIFOREU Workforce verbindet Ihre Programme zu einem gemeinsamen Ablauf.',href:'workforce/workflows/',action:'Workflows entdecken'},
   traffic:{title:'VerkehrsAI',copy:'Lage- und Signalpläne digital erschließen. Mit VerkehrsOS als EU-gefördertem Forschungsprojekt.',href:'verkehrsai.html',action:'VerkehrsAI entdecken'},
 };
 
@@ -63,7 +63,7 @@ export function mountWorld(host,{selected='overview',capture=false,plainRoom=fal
     if(changed){
       host.querySelector('[data-gallery-title]').textContent=c.title;host.querySelector('[data-gallery-description]').textContent=c.copy;
       const link=host.querySelector('[data-gallery-link]');link.href=c.href;link.firstChild.textContent=c.action+' ';
-      host.querySelector('[data-gallery-family]').textContent=view==='overview'?'AIFOREU':view==='traffic'?'EU-gefördert':'Agentario';
+      host.querySelector('[data-gallery-family]').textContent=view==='overview'?'AIFOREU':view==='traffic'?'EU-gefördert':'AIFOREU Workforce';
       link.hidden=view==='overview';
       previous.hidden=false;previous.firstChild.textContent=singleDesk?(index>0?'← '+content[AREAS[index-1]].title:'← Zurück'):view==='overview'?'↺ Intro':'← Alle Tische';
       next.firstChild.textContent=index<3?content[AREAS[index+1]].title+' →':'Weiter →';

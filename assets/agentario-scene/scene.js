@@ -72,7 +72,7 @@ export function makeKit() {
   return { box, line, label, document:documentCard, plate, ring, check, material, palette, clamp, ease, phase, mix, track, dispose };
 }
 
-// Illustrative, already approved Agentario workflow. The moving dossier is one case.
+// Illustrative, already approved AIFOREU Workforce workflow. The moving dossier is one case.
 export function createScene({ THREE, kit }) {
   const { box, line, label, document: paper, material, track, palette: p, phase, mix } = kit;
   const root = new THREE.Group();

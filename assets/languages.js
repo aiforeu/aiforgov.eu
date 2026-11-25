@@ -170,7 +170,7 @@
     }).filter(entry => entry.value);
   }
   function applyLanguage() {
-    html.lang = language; remember(language);
+    html.lang = language;
     const url = new URL(location.href); url.searchParams.set('lang', language); history.replaceState(history.state, '', url);
     document.querySelector('meta[property="og:locale"]')?.setAttribute('content', language.replace('-', '_'));
     missing.clear(); dialog?.remove(); createDialog(); scan(html); mountButtons();
@@ -182,7 +182,7 @@
     html.dataset.languagePending = '';
     try {
       const data = await getJSON(new URL(`i18n/${code}.json?v=${manifest.version}`, assetRoot));
-      language = code; installDictionary(data); applyLanguage(); opener?.focus({ preventScroll: true });
+      language = code; remember(code); installDictionary(data); applyLanguage(); opener?.focus({ preventScroll: true });
     } catch {
       delete html.dataset.languagePending;
       const error = document.createElement('p'); error.setAttribute('role', 'alert'); error.textContent = translated('Die Übersetzung konnte nicht geladen werden.', 'de');

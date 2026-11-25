@@ -1,4 +1,4 @@
-/* AIFOREU · Flug · Station „Voice“ (Agentario): Kommunikationssatellit, der Gespräche aussendet.
+/* AIFOREU · Flug · Station „Voice“ (AIFOREU Workforce): Kommunikationssatellit, der Gespräche aussendet.
    Bus mit Stahlrahmen und Graphitfolie, zwei Solarflügel quer (±X), auf dem Erddeck (+Y) ein großer Parabolspiegel
    an Mast und Kardan, Speisehorn am Dreibein. Der Strahl zeigt nach rechts oben: Die Szenenkamera (vorn, oben,
    Sonnenseite) sieht die Schüssel im Profil, die Wellenringe laufen frei über dem rechten Flügel davon. */

@@ -9,8 +9,8 @@ import { THREE, FARBEN, erstelleUmgebung, erstelleLicht, erstelleSterne, erstell
 const STATIONEN = [
   { id: 'verkehr', titel: 'VerkehrsAI', art: 'Bereich', text: 'Lage- und Signalpläne erschließen, prüfen und weiterbearbeiten.', href: 'verkehrsai.html', pos: [-11.61, 0.54, -2.16], r: 2.7 },
   { id: 'verkehrsos', titel: 'VerkehrsOS', art: 'Produkt', text: 'Kreuzungen verstehen. Fundiert weiterplanen.', href: 'verkehrsos.html', pos: [-5.94, -2.29, 4.59], r: 1.15 },
-  { id: 'voice', titel: 'Voice', art: 'Agentario', text: 'Gespräche, aus denen Arbeit wird.', href: 'agentario/voice/', pos: [6.21, -2.43, 4.46], r: 1.15 },
-  { id: 'workforce', titel: 'Autonomous Workforce', art: 'Bereich', text: 'Agentario verbindet Voice, Desktop und Workflows für wiederkehrende Arbeit.', href: 'autonomous-workforce.html', pos: [11.34, 0.94, -2.97], r: 2.9 },
+  { id: 'voice', titel: 'Voice', art: 'AIFOREU Workforce', text: 'Gespräche, aus denen Arbeit wird.', href: 'workforce/voice/', pos: [6.21, -2.43, 4.46], r: 1.15 },
+  { id: 'workforce', titel: 'Autonomous Workforce', art: 'Bereich', text: 'AIFOREU Workforce verbindet Voice, Desktop und Workflows für wiederkehrende Arbeit.', href: 'autonomous-workforce.html', pos: [11.34, 0.94, -2.97], r: 2.9 },
   { id: 'anyuse', titel: 'AnyUse', art: 'Projekt', text: 'Aus wiederkehrender Arbeit werden konkrete Vorschläge.', href: 'anyuse.html', pos: [3.24, 4.19, -11.34], r: 1.25 },
   { id: 'ive', titel: 'IVE', art: 'Projekt', text: 'Mehrere Coding-Agenten. Ein klarer Überblick.', href: 'ive.html', pos: [-4.32, 3.65, -10.67], r: 1.25 },
 ];

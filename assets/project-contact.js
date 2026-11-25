@@ -8,7 +8,7 @@
  if(requested){const option=[...topic.options].find(o=>o.value.toLowerCase().startsWith(requested.toLowerCase()));if(option)topic.value=option.value;}
  const integration=params.get('integration')?.trim().replace(/[\r\n]/g,' ').slice(0,80);
  let generatedPrefill='';
- const prefill=()=>{if(integration&&(!task.value||task.value===generatedPrefill)){generatedPrefill=t('Ich möchte {0} mit Agentario verbinden. Unser gewünschter Ablauf:').replace('{0}',integration)+' ';task.value=generatedPrefill;}};
+ const prefill=()=>{if(integration&&(!task.value||task.value===generatedPrefill)){generatedPrefill=t('Ich möchte {0} mit AIFOREU Workforce verbinden. Unser gewünschter Ablauf:').replace('{0}',integration)+' ';task.value=generatedPrefill;}};
  if(window.AiforeuLanguage?.ready)prefill();window.addEventListener('aiforeu:language-ready',prefill);
  const invalidate=()=>{draft.hidden=true;status.textContent='';task.setCustomValidity('');};topic.addEventListener('change',invalidate);task.addEventListener('input',invalidate);
  window.addEventListener('aiforeu:language-ready',invalidate);

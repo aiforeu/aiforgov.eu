@@ -50,7 +50,7 @@ export function createExhibits() {
   const monitor=subgroup(screen,'screen',[0,1.24,0]);monitor.rotation.x=-.07;
   box(monitor,m.ink,0,0,0,2.85,1.83,.105,{soft:true});
   const display=canvasTexture(2400,1500,(c,w,h)=>{
-    c.fillStyle='#e9edf0';c.fillRect(0,0,w,h);c.fillStyle='#ffffff';c.fillRect(0,0,w,82);c.fillStyle='#171c23';c.font='500 28px Arial';c.fillText('Agentario',52,51);c.fillStyle='#6f7781';c.font='23px Arial';c.fillText('Desktop',230,51);c.textAlign='right';c.fillText('Beispiel',w-50,51);c.textAlign='left';
+    c.fillStyle='#e9edf0';c.fillRect(0,0,w,h);c.fillStyle='#ffffff';c.fillRect(0,0,w,82);c.fillStyle='#171c23';c.font='500 28px Arial';c.fillText('AIFOREU Workforce',52,51);c.fillStyle='#6f7781';c.font='23px Arial';c.fillText('Desktop',230,51);c.textAlign='right';c.fillText('Beispiel',w-50,51);c.textAlign='left';
     c.fillStyle='#fff';c.fillRect(475,150,1450,1230);c.fillStyle='#161b21';c.font='500 76px Arial';c.fillText('Angebot',585,310);c.fillStyle='#737a82';c.font='26px Arial';c.fillText('Entwurf · 12. November 2026',588,370);
     c.fillStyle='#151a22';c.font='36px Arial';c.fillText('KI-Implementierung',588,520);c.fillStyle='#707780';c.font='27px Arial';c.fillText('Position',588,660);c.fillText('Umfang',1300,660);c.fillText('Status',1640,660);
     for(const [i,t] of ['Prozessanalyse','Integration','Einrichtung & Übergabe'].entries()){const y=750+i*125;c.fillStyle='#e6e9ec';c.fillRect(588,y-58,1220,2);c.fillStyle='#252d36';c.font='29px Arial';c.fillText(t,588,y);c.fillStyle='#828991';c.fillText(['Workshop','Ihre Systeme','Ihr Team'][i],1300,y);c.fillStyle='#2254e6';c.fillRect(1640,y-27,120,34);}

@@ -271,7 +271,7 @@ export function createInteriorDistricts() {
   box(office,w.wood,7.05,3.18,-3.35,8.55,.2,1.52,{soft:true});
   for(const x of [3.15,7.05,10.95]) box(office,w.wood,x,1.625,-3.32,.13,3.25,.15);
   for(let n=0;n<12;n++) box(office,w.wood,3.2+n*.7,3.05,-3.35,.075,.12,1.35);
-  text(office,'AGENTARIO',7.08,3.49,-3.24,4.8,.60,{size:71});
+  text(office,'AIFOREU WORKFORCE',7.08,3.49,-3.24,4.8,.60,{size:71});
   box(office,m.ink,7.03,2.06,-3.84,4.22,1.25,.07,{soft:true});
   // The wall drawing is a simple physical process map, not a pretend product UI.
   for(const [i,x] of [5.72,7.03,8.34].entries()) {

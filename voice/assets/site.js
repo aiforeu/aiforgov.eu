@@ -111,8 +111,23 @@ if(cf){
  const errors={invalid:'Bitte prüfen Sie Ihre Angaben.',unavailable:'Der Versand ist noch nicht eingerichtet. Bitte schreiben Sie an contact@aiforgov.eu.',delivery:'Die Anfrage konnte nicht versendet werden. Bitte versuchen Sie es später erneut.'};
  function showError(message){error.textContent=message;error.hidden=false;error.focus({preventScroll:true});}
  const code=new URLSearchParams(location.search).get('form-error');if(errors[code])showError(errors[code]);
+ // E-mail draft: the request is put together in the browser and sent by the visitor's own mail program.
+ const draft=$('[data-pilot-draft]',form),mail=$('[data-pilot-mail]',form),copy=$('[data-pilot-copy]',form),draftText=$('[data-pilot-text]',form),note=$('[data-pilot-status]',form);
+ const tr=value=>window.AiforeuLanguage?.t(value,'de')||value;
+ const labelOf=field=>{const label=$('label[for="'+field.id+'"]',form);return label?label.textContent.replace(/\s*\([^)]*\)\s*$/,'').trim():'';};
+ function requestText(){
+  const name=$('#cf-name',form).value.trim();
+  const facts=['cf-org','cf-email','cf-tel','cf-einsatz'].map(id=>$('#'+id,form)).filter(field=>field&&field.value.trim()).map(field=>{const label=labelOf(field),value=(field.tagName==='SELECT'?field.options[field.selectedIndex].textContent:field.value).trim();return label+(/[?:]$/.test(label)?' ':': ')+value;});
+  return [tr('Hallo AIFOREU-Team,'),facts.join('\n'),cf.value.trim(),[tr('Viele Grüße'),name].filter(Boolean).join('\n')].filter(Boolean).join('\n\n');
+ }
+ if(draft){
+  const hide=()=>{draft.hidden=true;note.textContent='';};
+  form.addEventListener('input',hide);window.addEventListener('aiforeu:language-ready',hide);
+  copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(draftText.value);note.textContent='Anfragetext kopiert.';}catch{draftText.focus();draftText.select();note.textContent='Bitte den markierten Text kopieren.';}});
+ }
  form.addEventListener('submit',async event=>{
   if(!form.checkValidity())return;
+  if(draft&&form.action.startsWith('mailto:')){event.preventDefault();error.hidden=true;const body=requestText();draftText.value=body;mail.href='mailto:contact@aiforgov.eu?subject='+encodeURIComponent('AIFOREU Voice – Pilotanfrage')+'&body='+encodeURIComponent(body);draft.hidden=false;draftText.style.height='auto';draftText.style.height=Math.min(draftText.scrollHeight+2,480)+'px';note.textContent='Es wurde noch nichts versendet.';mail.focus();return;}
   if(new URL(form.action).pathname!=='/api/pilot')return;
   event.preventDefault();if(submit.disabled)return;error.hidden=true;submit.disabled=true;submit.textContent='Wird gesendet …';
   const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);let serverMessage;
