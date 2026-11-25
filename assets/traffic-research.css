@@ -91,9 +91,28 @@
   font: 500 clamp(19px, 1.65vw, 25px)/1.42 var(--display);
   letter-spacing: -.02em;
 }
-.traffic-followup figcaption {
-  margin-top: 14px;
-  font: 500 14px/1.5 var(--body);
+.traffic-followup figcaption { margin-top: 20px; }
+.traffic-quote-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: inherit;
+  text-decoration: none;
 }
-.traffic-followup figcaption a { color: inherit; text-underline-offset: .22em; }
+.traffic-quote-author img {
+  width: clamp(62px, 5.5vw, 76px);
+  height: auto;
+  border-radius: 50%;
+}
+.traffic-quote-author strong {
+  display: block;
+  font: 600 16px/1.4 var(--body);
+}
+.traffic-quote-source {
+  color: #405548;
+  font: 500 14px/1.5 var(--body);
+  text-decoration: underline;
+  text-underline-offset: .22em;
+}
+.traffic-quote-author:hover .traffic-quote-source { color: inherit; }
 .traffic-followup + .traffic-contact-section { padding-top: var(--section-space); }
