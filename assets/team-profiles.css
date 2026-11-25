@@ -72,8 +72,18 @@
   text-decoration: none;
 }
 .team-name-end { white-space: nowrap; }
-.team-linkedin img { display: inline-block; height: auto; margin-inline-start: 5px; vertical-align: -.06em; }
-.team-linkedin:hover { text-decoration: underline; text-underline-offset: .12em; }
+.team-linkedin img {
+  display: inline-block;
+  width: clamp(14px, .6em, 16px);
+  height: auto;
+  margin-inline-start: 5px;
+  vertical-align: .07em;
+  filter: grayscale(1) opacity(.8);
+}
+.team-linkedin:focus-visible img { filter: none; }
+@media (hover: hover) {
+  .team-linkedin:hover img { filter: none; }
+}
 .team-reference { margin: 18px 0 0; }
 .team-reference a { color: #444; font-size: 15px; line-height: 1.5; text-underline-offset: .2em; }
 .team-extra { font-weight: 500; color: inherit; text-underline-offset: .2em; }
@@ -138,7 +148,6 @@
 .team-compact .team-photo { border-radius: 50%; }
 .team-compact .team-person-copy { padding: 0; }
 .team-compact .team-person h3 { font-size: 17px; letter-spacing: -.02em; }
-.team-compact .team-linkedin img { width: 21px; }
 .team-compact .team-role { margin-top: 3px; font-size: 13px; }
 
 @media (min-width: 540px) and (max-width: 940px) {
