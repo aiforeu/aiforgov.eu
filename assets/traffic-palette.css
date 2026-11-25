@@ -1,59 +1,43 @@
-/* The clay accent echoes the route highlight in the traffic plan. */
 .page-traffic {
   --traffic-ink: #292929;
-  --traffic-copy: #4d4946;
-  --traffic-muted: #665e58;
-  --traffic-deep: #884c37;
-  --traffic-deep-hover: #6c392a;
-  --traffic-sand: #f3ede5;
-  --traffic-line: #dbcec2;
-  --traffic-light-text: #fffaf5;
-  --traffic-on-clay: #f5e8dd;
-  --traffic-focus-light: #ffd5b8;
+  --traffic-copy: #424b51;
+  --traffic-muted: #4c5962;
+  --traffic-action: #2b6048;
+  --traffic-action-hover: #1e4635;
+  --traffic-surface: #dce7ef;
+  --traffic-wash: #f2f6f8;
+  --traffic-line: #b0c2ce;
 }
 .page-traffic main {
-  --accent: var(--traffic-deep-hover);
+  --accent: var(--traffic-action-hover);
   color: var(--traffic-ink);
 }
-.page-traffic .traffic-research-section {
-  background: var(--paper);
-  color: var(--traffic-ink);
-}
-.page-traffic .traffic-research-copy p,
-.page-traffic .traffic-research-partners p { color: var(--traffic-copy); }
-.page-traffic .traffic-research-partners p { border-color: var(--traffic-line); }
-.page-traffic .traffic-research-aiforeu img { filter: none; }
+.page-traffic main :is(h1, h2, h3, h4) { color: var(--traffic-ink); }
 .page-traffic .traffic-plan-section { background: var(--paper); }
 
 .page-traffic .traffic-mockup { color: var(--traffic-ink); }
 .page-traffic .tm-window { border-color: #dbdbdb; box-shadow: 0 28px 60px -45px #17171733; }
-.page-traffic .tm-appbar { background: var(--traffic-sand); border-color: var(--traffic-line); }
+.page-traffic .tm-appbar { background: var(--traffic-surface); border-color: var(--traffic-line); }
 .page-traffic :is(.tm-example, .tm-heading > span, .tm-inventory dt, .tm-detail > p),
 .page-traffic .traffic-mockup figcaption { color: var(--traffic-muted); }
 .page-traffic :is(.tm-result, .tm-detail) { border-color: #e0e0e0; }
 .page-traffic :is(.tm-inventory > div, .tm-streets li) { border-color: #eaeaea; }
 .page-traffic .tm-motion-control { color: #424242; border-color: #acacac77; }
-.page-traffic .tm-motion-control:focus-visible { outline-color: var(--traffic-deep-hover); }
+.page-traffic .tm-motion-control:focus-visible { outline-color: var(--traffic-action-hover); }
 
-.page-traffic .traffic-contact-section { background: #fbf8f4; }
-.page-traffic .traffic-contact-panel > div:first-child > p:not(.eyebrow),
-.page-traffic .traffic-pilot-notes > p,
-.page-traffic .traffic-pilot-notes > div > span,
-.page-traffic .traffic-pilot-notes .traffic-small-label { color: var(--traffic-on-clay); }
-.page-traffic .traffic-pilot-notes,
-.page-traffic .traffic-pilot-notes > div { border-color: #b9856c; }
-.page-traffic .traffic-contact-panel .button:hover { background: #f2d9c6; border-color: #f2d9c6; }
-.page-traffic .traffic-contact-panel :focus-visible { outline-color: var(--traffic-focus-light); }
+.page-traffic :is(.traffic-pilot-notes, .traffic-mockup figcaption) a { color: var(--traffic-action); }
+.page-traffic :is(.traffic-pilot-notes, .traffic-mockup figcaption) a:hover,
+.page-traffic .traffic-intro-copy .bp-link:hover { color: var(--traffic-action-hover); }
 
 .page-traffic .site-footer[data-company-footer] {
-  --accent: var(--traffic-focus-light);
-  background: #593f34;
-  color: var(--traffic-light-text);
+  --accent: var(--traffic-action-hover);
+  background: var(--traffic-surface);
+  color: var(--traffic-ink);
 }
-.page-traffic .site-footer :is(.brand, .footer-top h2) { color: var(--traffic-light-text); }
-.page-traffic .site-footer :is(.footer-brand p, .footer-links a, .footer-bottom, .footer-bottom a) {
-  color: #f0dfd1;
-}
-.page-traffic .site-footer :is(.footer-partner, .footer-bottom) { border-color: #8e6d5d; }
-.page-traffic .site-footer .footer-wordmark { color: #ab8370; }
-.page-traffic .site-footer a:is(:hover, :focus-visible) { color: #fff; }
+.page-traffic .site-footer :is(.brand, .footer-top h2) { color: var(--traffic-ink); }
+.page-traffic .site-footer .brand img { filter: none; }
+.page-traffic .site-footer :is(.footer-brand p, .footer-bottom) { color: var(--traffic-muted); }
+.page-traffic .site-footer :is(.footer-links, .footer-bottom) a { color: var(--traffic-action); }
+.page-traffic .site-footer :is(.footer-partner, .footer-bottom) { border-color: var(--traffic-line); }
+.page-traffic .site-footer .footer-wordmark { color: #a4b7c4; }
+.page-traffic .site-footer a:is(:hover, :focus-visible) { color: var(--traffic-action-hover); }

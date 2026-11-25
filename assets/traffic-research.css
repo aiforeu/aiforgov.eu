@@ -1,8 +1,8 @@
 /* VerkehrsOS: the project and its research partnership share one clear place. */
 .traffic-research-section {
   padding-block: var(--section-space);
-  background: var(--night);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--traffic-ink);
 }
 .traffic-research-layout {
   display: grid;
@@ -17,7 +17,7 @@
 .page-traffic .traffic-research-copy p {
   max-width: 58ch;
   margin-top: 24px;
-  color: #cacaca;
+  color: var(--traffic-copy);
   font-size: 17px;
   line-height: 1.7;
 }
@@ -42,7 +42,6 @@
 .traffic-research-aiforeu img {
   width: 38px;
   height: auto;
-  filter: brightness(0) invert(1);
 }
 .traffic-research-iotec img {
   display: block;
@@ -50,11 +49,11 @@
   height: auto;
 }
 .page-traffic .traffic-research-partners p {
-  border-top: 1px solid #424242;
+  border-top: 1px solid var(--traffic-line);
   padding-top: 24px;
   font-size: 15px;
   line-height: 1.6;
-  color: #cacaca;
+  color: var(--traffic-copy);
 }
 @media (max-width: 760px) {
   .traffic-research-layout { grid-template-columns: minmax(0, 1fr); }
@@ -72,7 +71,7 @@
 }
 
 .traffic-followup {
-  background: var(--traffic-sand);
+  background: var(--traffic-surface);
   color: var(--traffic-ink);
 }
 .traffic-followup h2 {
@@ -109,10 +108,10 @@
   font: 600 16px/1.4 var(--body);
 }
 .traffic-quote-source {
-  color: var(--traffic-deep);
+  color: var(--traffic-action);
   font: 500 14px/1.5 var(--body);
   text-decoration: underline;
   text-underline-offset: .22em;
 }
-.traffic-quote-author:hover .traffic-quote-source { color: inherit; }
+.traffic-quote-author:hover .traffic-quote-source { color: var(--traffic-action-hover); }
 .traffic-followup + .traffic-contact-section { padding-top: var(--section-space); }
